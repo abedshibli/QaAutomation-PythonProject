@@ -4,10 +4,10 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from Main.utilities.common_ops import Common_Ops
+from Main.Utilities.common_ops import Common_Ops
 
 #web
-from Main.utilities.manage_pages import Manage_Pages
+from Main.Utilities.manage_pages import Manage_Pages
 
 driver = None
 action = None
