@@ -15,10 +15,10 @@ class LoginPage:
         return self.driver.find_element(By.XPATH, "//span[@class='MuiButton-label']")
 
     def get_signup_page(self):
-        return self.driver.find_element(By.XPATH, "//a[@href='/signup']")
+        return self.driver.find_element(By.XPATH, "//a")
 
-    def signup_page(self):
-        return self.get_signup_page().click()
+    # def signup_page(self):
+    #     return self.get_signup_page().click()
 
 
     def login(self, username, password):
