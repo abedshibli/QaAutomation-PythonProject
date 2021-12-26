@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <env>
+    <!-- web-->
     <browserType>chrome</browserType>
+
+    <!-- mobile-->
+    <reportDirectory>reports</reportDirectory>
+    <reportFormat>xml</reportFormat>
+    <testName>Untitled</testName>
+
+    <!-- electron-->
+    <electron_app>C:\\Automation\\Electrons\\Electron API Demos.exe</electron_app>
+    <edriver>C:\\electrondriver.exe</edriver>
+
+    <!-- api-->
+
+    <!-- desktop-->
 </env>

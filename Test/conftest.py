@@ -21,18 +21,18 @@ register_page = None
 browser_type = "chrome"
 
 # MOBILE
-reportDirectory = 'reports'
-reportFormat = 'xml'
+reportDirectory = None
+reportFormat = None
 dc = {}
-testName = 'Untitled'
+testName = None
 
 # API
-url = 'https://api.chucknorris.io/jokes/'
+url = None
 header = {'Content-type': 'application/json'}
 
 # ELECTRON
-electron_app = "C:\\Automation\\Electrons\\Electron API Demos.exe"
-edriver = "C:\\electrondriver.exe"
+electron_app = None
+edriver = None
 
 
 @pytest.fixture(scope='class')
