@@ -31,25 +31,25 @@ edriver = None
 
 @pytest.fixture(scope='class')
 def init_web(request):
-    #browser_type = Common_Ops.get_data("browserType")
-    # if browser_type.lower() == "chrome":
-    driver = webdriver.Chrome(ChromeDriverManager().install())
-    globals()['driver'] = driver
-    request.cls.driver = driver
-    #     globals()['driver'] = init_chrome()
-    #     request.cls.driver = globals()['driver']
-    # elif browser_type.lower() == "firefox":
-    #     globals()['driver'] = init_firefox()
-    #     request.cls.driver = globals()['driver']
-    # elif browser_type.lower() == "edge":
-    #     globals()['driver'] = init_edge()
-    #     request.cls.driver = globals()['driver']
-    # else:
-    #     raise Exception("This browser NOT supported")
+    browser_type = Common_Ops.get_data("browserType")
+    if browser_type.lower() == "chrome":
+    # driver = webdriver.Chrome(ChromeDriverManager().install())
+    # globals()['driver'] = driver
+    # request.cls.driver = driver
+        globals()['driver'] = init_chrome()
+        request.cls.driver = globals()['driver']
+    elif browser_type.lower() == "firefox":
+        globals()['driver'] = init_firefox()
+        request.cls.driver = globals()['driver']
+    elif browser_type.lower() == "edge":
+        globals()['driver'] = init_edge()
+        request.cls.driver = globals()['driver']
+    else:
+        raise Exception("This browser NOT supported")
 
-    Manage_Pages.init_web_pages(driver)
+    Manage_Pages.init_web_pages(request.cls.driver)
     yield
-    driver.quit()
+    request.cls.driver.quit()
 
 
 def init_chrome():
@@ -89,17 +89,17 @@ def my_api_starter(request):
 
 
 @pytest.fixture(scope='class')
-def my_desktop_starter(request):
+def init_desktop(request):
     desired_caps = {}
     desired_caps["app"] = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
     desired_caps["platformName"] = "Windows"
     desired_caps["deviceName"] = "WindowsPC"
     globals()['driver'] = webdriver.Remote("http://127.0.0.1:4723", desired_caps)
-    globals()['driver'].implicitly_wait(5)
-    globals()['driver'] = driver
-    request.cls.driver = driver
+    request.cls.driver = globals()['driver']
+    request.cls.driver.implicitly_wait(3)
+    Manage_Pages.init_desktop_page(request.cls.driver)
     yield
-    driver.quit()
+    request.cls.driver.quit()
 
 
 @pytest.fixture(scope='class')
