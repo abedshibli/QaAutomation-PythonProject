@@ -1,22 +1,16 @@
-from pkgutil import get_data
-
 import pytest
 import requests
-from account.api.api_v1.endpoints import login
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from Main.Utilities.common_ops import Common_Ops
+from Main.utilities.common_ops import Common_Ops
 
 #web
+from Main.utilities.manage_pages import Manage_Pages
+
 driver = None
 action = None
-
-login_page = None
-main_page = None
-new_bank_account_page = None
-register_page = None
 
 browser_type = "chrome"
 
@@ -37,20 +31,23 @@ edriver = None
 
 @pytest.fixture(scope='class')
 def init_web(request):
-    browser_type = Common_Ops.get_data("browserType")
-    if browser_type.lower() == "chrome":
-        globals()['driver'] = init_chrome()
-        request.cls.driver = globals()['driver']
-    elif browser_type.lower() == "firefox":
-        globals()['driver'] = init_firefox()
-        request.cls.driver = globals()['driver']
-    elif browser_type.lower() == "edge":
-        globals()['driver'] = init_edge()
-        request.cls.driver = globals()['driver']
-    else:
-        raise Exception("This browser NOT supported")
-    Common_Ops.init_web_pages()
+    #browser_type = Common_Ops.get_data("browserType")
+    # if browser_type.lower() == "chrome":
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    globals()['driver'] = driver
+    request.cls.driver = driver
+    #     globals()['driver'] = init_chrome()
+    #     request.cls.driver = globals()['driver']
+    # elif browser_type.lower() == "firefox":
+    #     globals()['driver'] = init_firefox()
+    #     request.cls.driver = globals()['driver']
+    # elif browser_type.lower() == "edge":
+    #     globals()['driver'] = init_edge()
+    #     request.cls.driver = globals()['driver']
+    # else:
+    #     raise Exception("This browser NOT supported")
 
+    Manage_Pages.init_web_pages(driver)
     yield
     driver.quit()
 

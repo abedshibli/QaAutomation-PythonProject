@@ -1,16 +1,18 @@
-from Main.PageObject.web import register_page
-from Main.PageObject.web.register_page import RegisterPage
-from Main.Utilities.common_ops import Common_Ops
+import time
 
+from Main import utilities
+from Main.utilities.manage_pages import Manage_Pages
 
-class Register_Workflow(Common_Ops):
+class Register_Workflow:
 
-    def create_new_account(self, first_name, last_name, username, password):
-        #check
-        register_page.get_first_name.send_keys(first_name)
-        register_page.send_keys(first_name)
-        register_page.get_last_name().send_keys(last_name)
-        register_page.get_username().send_keys(username)
-        register_page.get_password().send_keys(password)
-        register_page.get_confirm_password().send_keys(password)
-        register_page.get_signup_btn().click()
+    @staticmethod
+    def create_new_account(first_name, last_name, username, password):
+
+        utilities.manage_pages.login_page.get_signup_page().click()
+        time.sleep(4)
+        utilities.manage_pages.register_page.get_first_name().send_keys(first_name)
+        utilities.manage_pages.register_page.get_last_name().send_keys(last_name)
+        utilities.manage_pages.register_page.get_username().send_keys(username)
+        utilities.manage_pages.register_page.get_password().send_keys(password)
+        utilities.manage_pages.register_page.get_confirm_password().send_keys(password)
+        utilities.manage_pages.register_page.get_signup_btn().click()
