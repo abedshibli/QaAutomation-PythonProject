@@ -6,6 +6,7 @@ from Main.Utilities.common_ops import Common_Ops
 class Register_Workflow(Common_Ops):
 
     def create_new_account(self, first_name, last_name, username, password):
+        #check
         register_page.get_first_name.send_keys(first_name)
         register_page.send_keys(first_name)
         register_page.get_last_name().send_keys(last_name)
