@@ -7,6 +7,15 @@ from Main.Extensions.desktop_actions import Desktop_Actions
 class Desktop_WF:
 
     @staticmethod
+    @allure.step("Perform an arithmetic operation")
+    def two_numbers_to_calculate(num1, operator, num2):
+        Desktop_Actions.click_action(Utilities.manage_pages.calc_page.get_clear_btn())
+        Desktop_WF.number_to_webElement(num1)
+        Desktop_WF.operators(operator)
+        Desktop_WF.number_to_webElement(num2)
+        return Desktop_WF.get_calc_result()
+
+    @staticmethod
     @allure.step("number to webElemnt")
     def number_to_webElement(number):
         if number == 0:
@@ -52,11 +61,3 @@ class Desktop_WF:
         Desktop_Actions.click_action(Utilities.manage_pages.calc_page.get_equal())
         return int(Utilities.manage_pages.calc_page.get_result().text[10:])
 
-    @staticmethod
-    @allure.step("Perform an arithmetic operation")
-    def two_numbers_to_calculate(num1, operator, num2):
-        Desktop_Actions.click_action(Utilities.manage_pages.calc_page.get_clear_btn())
-        Desktop_WF.number_to_webElement(num1)
-        Desktop_WF.operators(operator)
-        Desktop_WF.number_to_webElement(num2)
-        return Desktop_WF.get_calc_result()
