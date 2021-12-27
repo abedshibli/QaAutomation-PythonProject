@@ -8,3 +8,7 @@ class Web_Actions:
     def click_action(elem):
         elem.click()
 
+    @staticmethod
+    def get_text(elem):
+        elem.text()
+
