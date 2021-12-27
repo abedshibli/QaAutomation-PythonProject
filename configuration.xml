@@ -15,6 +15,7 @@
     <binaryLocation>C:/Automation/Electron/Electron/Electron API Demos.exe</binaryLocation>
 
     <!-- api-->
+    <apiUrl>http://localhost:3000</apiUrl>
 
     <!-- desktop-->
     <app>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</app>

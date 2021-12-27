@@ -18,8 +18,9 @@ dc = {}
 testName = None
 
 # API
-url = None
-header = {'Content-type': 'application/json'}
+url_api = None
+response = None
+header = None
 
 # ELECTRON
 edriver = None
@@ -44,23 +45,28 @@ def init_web(request):
 
 @pytest.fixture(scope='class')
 def init_mobile(request):
-    dc['reportDirectory'] = reportDirectory
-    dc['reportFormat'] = reportFormat
-    dc['testName'] = testName
-    dc['udid'] = '16af5295'
+    dc['udid'] = 'RF8N21R48PA'
     dc['appPackage'] = 'com.financial.calculator'
     dc['appActivity'] = '.FinancialCalculators'
     dc['platformName'] = 'android'
-    driver = webdriver.Remote('http://localhost:4722/wd/hub', dc)
+    driver = webdriver.Remote('http://localhost:4723/wd/hub', dc)
     request.cls.driver = driver
+    Manage_Pages.init_mobile_pages(request.cls.driver)
+
     yield
     driver.quit()
 
 
+
+
 @pytest.fixture(scope='class')
 def init_api(request):
-    response = requests.get(url + 'categories')
+    url_api = Common_Ops.get_data("apiUrl")
+    response = requests.get(Common_Ops.get_data("apiUrl"))
     request.cls.action = response.json()
+    request.cls.driver = webdriver.Chrome(ChromeDriverManager().install())
+    header = {'Content-Type': 'application/json'}
+
 
 
 @pytest.fixture(scope='class')
