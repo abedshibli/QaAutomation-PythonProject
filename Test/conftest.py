@@ -4,12 +4,15 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
+
+from Main.Utilities.DDT.manage_ddt import DDT
 from Main.Utilities.common_ops import Common_Ops
 from Main.Utilities.manage_pages import Manage_Pages
 
-#web
+# web
 driver = None
 action = None
+
 
 # MOBILE
 reportDirectory = None
@@ -18,9 +21,9 @@ dc = {}
 testName = None
 
 # API
-url_api = None
-response = None
-header = None
+url_api = 'http://localhost:3000'
+resource_api='/posts/'
+id_api='/101'
 
 # ELECTRON
 edriver = None
@@ -40,8 +43,10 @@ def init_web(request):
 
     request.cls.driver.get(Common_Ops.get_data("url"))
     Manage_Pages.init_web_pages(request.cls.driver)
+
     yield
     request.cls.driver.quit()
+
 
 @pytest.fixture(scope='class')
 def init_mobile(request):
@@ -57,16 +62,12 @@ def init_mobile(request):
     driver.quit()
 
 
-
-
 @pytest.fixture(scope='class')
 def init_api(request):
-    url_api = Common_Ops.get_data("apiUrl")
-    response = requests.get(Common_Ops.get_data("apiUrl"))
-    request.cls.action = response.json()
     request.cls.driver = webdriver.Chrome(ChromeDriverManager().install())
-    header = {'Content-Type': 'application/json'}
-
+    request.cls.driver.get(url_api)
+    yield
+    request.cls.driver.quit()
 
 
 @pytest.fixture(scope='class')
@@ -108,5 +109,3 @@ def init_firefox():
 def init_edge():
     _driver = webdriver.Edge(EdgeChromiumDriverManager().install())
     return _driver
-
-

@@ -10,4 +10,8 @@ class MainPage:
         return self.driver.find_element(By.XPATH, "//h6[@data-test='sidenav-username']")
 
     def get_logout_btn(self):
-        return self.driver.find_element(By.XPATH, "(//div[@class='MuiListItemText-root'])[5]")
+        return self.driver.find_element(By.XPATH, "(//div[@role='button'])[1]")
+
+    def get_balance(self):
+        return self.driver.find_element(By.XPATH, "//h6[@data-test='sidenav-user-balance']")
+

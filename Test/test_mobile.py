@@ -1,6 +1,8 @@
+import pytest
+
 from Main.WorkFlows.mobile_wf import Mobile_WF
 
-
+@pytest.mark.usefixtures('init_mobile')
 class Test_Financial:
 
     def test_1(self):
