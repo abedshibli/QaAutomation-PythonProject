@@ -23,7 +23,6 @@ url = None
 header = {'Content-type': 'application/json'}
 
 # ELECTRON
-electron_app = None
 edriver = None
 
 
@@ -94,12 +93,16 @@ def init_desktop(request):
 
 
 @pytest.fixture(scope='class')
-def my_electron_starter(request):
+def init_electron(request):
     options = webdriver.ChromeOptions()
-    options.binary_location = electron_app
-    globals()['driver'] = webdriver.Chrome(chrome_options=options, executable_path=edriver)
-    globals()['driver'].implicitly_wait(5)
-    globals()['driver'] = driver
-    request.cls.driver = driver
+    options.binary_location = 'C:/Automation/Electron/Electron/Electron API Demos.exe'
+    edriver = 'C:/Automation/Electron/electrondriver.exe'
+    request.cls.driver = webdriver.Chrome(chrome_options=options, executable_path=edriver)
+    request.cls.driver.implicitly_wait(5)
+    Manage_Pages.init_electron_page(request.cls.driver)
+
     yield
-    driver.quit()
+    request.cls.driver.quit()
+
+
+

@@ -1,4 +1,5 @@
 from Main.PageObject.desktop.calc_page import CalcPage
+from Main.PageObject.electron.electron_page import Electron_Page
 from Main.PageObject.web.login_page import LoginPage
 from Main.PageObject.web.main_page import MainPage
 from Main.PageObject.web.new_bank_account_page import Bank_Account_Page
@@ -16,3 +17,7 @@ class Manage_Pages:
     @staticmethod
     def init_desktop_page(driver):
         globals()['calc_page'] = CalcPage(driver)
+
+    @staticmethod
+    def init_electron_page(driver):
+        globals()['electron_page'] = Electron_Page(driver)
