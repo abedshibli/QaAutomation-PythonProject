@@ -24,7 +24,7 @@ class Web_WF:
         Web_Actions.insert_value(password, Utilities.manage_pages.login_page.get_password())
         Web_Actions.click_action(Utilities.manage_pages.login_page.get_signin_btn())
         time.sleep(3)
-        Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_next_btn())
+        #Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_next_btn())
 
     @staticmethod
     def new_bank_account(bank_name, routing_num, account_num ):
@@ -33,7 +33,7 @@ class Web_WF:
         Web_Actions.insert_value(account_num, Utilities.manage_pages.bank_account_page.get_account_number())
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_save_btn())
         time.sleep(3)
-        Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_done_btn())
+        #Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_done_btn())
 
     @staticmethod
     def current_connected_user():

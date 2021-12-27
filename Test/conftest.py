@@ -12,8 +12,6 @@ from Main.Utilities.manage_pages import Manage_Pages
 driver = None
 action = None
 
-browser_type = "chrome"
-
 # MOBILE
 reportDirectory = None
 reportFormat = None
@@ -33,17 +31,11 @@ edriver = None
 def init_web(request):
     browser_type = Common_Ops.get_data("browserType")
     if browser_type.lower() == "chrome":
-    # driver = webdriver.Chrome(ChromeDriverManager().install())
-    # globals()['driver'] = driver
-    # request.cls.driver = driver
-        globals()['driver'] = init_chrome()
-        request.cls.driver = globals()['driver']
+        request.cls.driver = init_chrome()
     elif browser_type.lower() == "firefox":
-        globals()['driver'] = init_firefox()
-        request.cls.driver = globals()['driver']
+        request.cls.driver = init_firefox()
     elif browser_type.lower() == "edge":
-        globals()['driver'] = init_edge()
-        request.cls.driver = globals()['driver']
+        request.cls.driver = init_edge()
     else:
         raise Exception("This browser NOT supported")
 
@@ -94,8 +86,7 @@ def init_desktop(request):
     desired_caps["app"] = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
     desired_caps["platformName"] = "Windows"
     desired_caps["deviceName"] = "WindowsPC"
-    globals()['driver'] = webdriver.Remote("http://127.0.0.1:4723", desired_caps)
-    request.cls.driver = globals()['driver']
+    request.cls.driver = webdriver.Remote("http://127.0.0.1:4723", desired_caps)
     request.cls.driver.implicitly_wait(3)
     Manage_Pages.init_desktop_page(request.cls.driver)
     yield

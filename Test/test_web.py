@@ -11,5 +11,5 @@ class Test_web:
 
     def test_02(self):
         Web_WF.login("loli", "123456")
-        Web_WF.new_bank_account("Leumi", "123456789", "123123123")
+        #Web_WF.new_bank_account("Leumi", "123456789", "123123123")
         assert Web_WF.current_connected_user() == "@loli"
