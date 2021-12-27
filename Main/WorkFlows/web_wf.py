@@ -3,8 +3,10 @@ import time
 import pytest
 
 from Main import Utilities
+from Main.Utilities.jdbc import JDBC
 from Main.Utilities.manage_pages import Manage_Pages
 from Main.Extensions.web_actions import Web_Actions
+
 
 class Web_WF:
 
@@ -28,7 +30,8 @@ class Web_WF:
         time.sleep(3)
 
     @staticmethod
-    def new_bank_account(bank_name, routing_num, account_num ):
+    def new_bank_account(bank_name, routing_num, account_num):
+
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_next_btn())
         Web_Actions.insert_value(bank_name, Utilities.manage_pages.bank_account_page.get_bank_name())
         Web_Actions.insert_value(routing_num, Utilities.manage_pages.bank_account_page.get_routing_number())
@@ -36,7 +39,6 @@ class Web_WF:
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_save_btn())
         time.sleep(3)
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_done_btn())
-
 
     @staticmethod
     def current_connected_user():
@@ -50,8 +52,9 @@ class Web_WF:
     def get_balance_text():
         return Web_Actions.get_text(Utilities.manage_pages.main_page.get_balance())
 
-
-
-
-
-
+    @staticmethod
+    def fill_bank():
+        JDBC.connect_db()
+        Web_WF.new_bank_account(JDBC.get_bank_list_details()[0][0], JDBC.get_bank_list_details()[0][1],
+                                JDBC.get_bank_list_details()[0][2])
+        JDBC.connect_db().close()

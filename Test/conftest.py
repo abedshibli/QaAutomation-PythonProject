@@ -1,3 +1,4 @@
+import mysql
 import pytest
 import requests
 from selenium import webdriver
@@ -22,8 +23,8 @@ testName = None
 
 # API
 url_api = 'http://localhost:3000'
-resource_api='/posts/'
-id_api='/101'
+resource_api = '/posts/'
+id_api = '/101'
 
 # ELECTRON
 edriver = None
@@ -109,3 +110,6 @@ def init_firefox():
 def init_edge():
     _driver = webdriver.Edge(EdgeChromiumDriverManager().install())
     return _driver
+
+
+

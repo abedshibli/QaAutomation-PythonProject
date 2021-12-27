@@ -3,7 +3,8 @@ import pytest
 from Main.WorkFlows.mobile_wf import Mobile_WF
 
 @pytest.mark.usefixtures('init_mobile')
-class Test_Financial:
+@pytest.mark.usefixtures('init_mobile')
+class Test_Mobile:
 
     def test_1(self):
         Mobile_WF.search("TVM Calculator")

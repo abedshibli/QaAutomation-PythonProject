@@ -30,3 +30,9 @@ class Test_web():
         connected_user = Web_WF.current_connected_user()
         Web_WF.logout_user()
         assert connected_user == '@' + username
+
+    def test_04(self):
+
+        Web_WF.register("Yoni1", "Choen1", "yooooooo", "1234567")
+        Web_WF.login("yooooooo", "1234567")
+        Web_WF.fill_bank()
