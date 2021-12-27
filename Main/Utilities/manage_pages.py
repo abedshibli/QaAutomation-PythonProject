@@ -4,12 +4,6 @@ from Main.PageObject.web.main_page import MainPage
 from Main.PageObject.web.new_bank_account_page import Bank_Account_Page
 from Main.PageObject.web.register_page import RegisterPage
 
-login_page = None
-register_page = None
-calc_page = None
-bank_account_page = None
-main_page = None
-
 class Manage_Pages:
 
     @staticmethod

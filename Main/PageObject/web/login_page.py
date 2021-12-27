@@ -18,9 +18,4 @@ class LoginPage:
         return self.driver.find_element(By.XPATH, "//a[@data-test='signup']")
 
 
-    # def login(self, username, password):
-    #     self.get_username().send_keys(username)
-    #     self.get_password().send_keys(password)
-    #     self.get_signin_btn().click()
-
 
