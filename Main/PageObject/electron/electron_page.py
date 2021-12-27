@@ -16,4 +16,4 @@ class Electron_Page:
         return self.driver.find_element(By.XPATH, "//*[@id='screen-info']")
 
     def get_screen_resloution(self):
-        return self.driver.find_element(By.ID, "got-screen-info").text
+        return self.driver.find_element(By.ID, "got-screen-info")

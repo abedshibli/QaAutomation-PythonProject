@@ -37,5 +37,5 @@ class Web_WF:
 
     @staticmethod
     def current_connected_user():
-        return Utilities.manage_pages.main_page.get_current_connected_user().text
+        return Web_Actions.get_text(Utilities.manage_pages.main_page.get_current_connected_user())
 

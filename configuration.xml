@@ -2,6 +2,7 @@
 <env>
     <!-- web-->
     <browserType>chrome</browserType>
+    <url>http://localhost:3000/</url>
 
     <!-- mobile-->
     <reportDirectory>reports</reportDirectory>
@@ -10,9 +11,14 @@
 
     <!-- electron-->
     <electron_app>C:\\Automation\\Electrons\\Electron API Demos.exe</electron_app>
-    <edriver>C:\\electrondriver.exe</edriver>
+    <edriver>C:/Automation/Electron/electrondriver.exe</edriver>
+    <binaryLocation>C:/Automation/Electron/Electron/Electron API Demos.exe</binaryLocation>
 
     <!-- api-->
 
     <!-- desktop-->
+    <app>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</app>
+    <platformName>Windows</platformName>
+    <deviceName>WindowsPC</deviceName>
+    <serverDesktop>http://127.0.0.1:4723</serverDesktop>
 </env>

@@ -10,5 +10,5 @@ class Web_Actions:
 
     @staticmethod
     def get_text(elem):
-        elem.text()
+        return elem.text
 

@@ -16,6 +16,6 @@ class Electron_WF:
         Electron_Actions.click_action(Utilities.manage_pages.electron_page.get_screen_info())
         Electron_Actions.click_action(Utilities.manage_pages.electron_page.get_demobtn())
         time.sleep(2)
-        return Utilities.manage_pages.electron_page.get_screen_resloution()
+        return Electron_Actions.get_text(Utilities.manage_pages.electron_page.get_screen_resloution())
 
 

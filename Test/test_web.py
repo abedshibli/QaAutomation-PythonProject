@@ -6,7 +6,6 @@ from Main.WorkFlows.web_wf import Web_WF
 class Test_web:
 
     def test_01(self):
-        self.driver.get('http://localhost:3000/')
         Web_WF.register("Yoni", "Choen", "Yoni", "123456")
 
     def test_02(self):
