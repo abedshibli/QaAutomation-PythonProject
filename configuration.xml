@@ -14,8 +14,8 @@
 
     <!-- electron-->
     <electron_app>C:\\Automation\\Electrons\\Electron API Demos.exe</electron_app>
-    <edriver>C:/Automation/Electron/electrondriver.exe</edriver>
-    <binaryLocation>C:/Automation/Electron/Electron/Electron API Demos.exe</binaryLocation>
+    <edriver>C:\Automation\electronDriver\electrondriver.exe</edriver>
+    <binaryLocation>C:\Automation\Electron API Demos\Electron API Demos.exe</binaryLocation>
 
     <!-- api-->
     <apiUrl>http://localhost:3000</apiUrl>

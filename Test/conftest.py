@@ -1,5 +1,5 @@
 import pytest
-from applitools.selenium import Eyes
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
@@ -9,7 +9,6 @@ from Main.Utilities.manage_pages import Manage_Pages
 
 # web
 driver = None
-eyes = Eyes()
 
 # MOBILE
 dc = {}
@@ -34,16 +33,12 @@ def init_web():
         driver = init_edge()
     else:
         raise Exception("This browser NOT supported")
-
+    globals()["driver"] = driver
     driver.get(Common_Ops.get_data("url"))
     Manage_Pages.init_web_pages(driver)
 
-    # eyes.api_key = 'wLCwiZvtsfJZ1l4C1w2xEVUaCQqR5ZB8hwW8YECm107fE110'
-    # eyes.open(driver, "Applitools", "Batch run 1")
-
     yield
-    # eyes.close()
-    # eyes.abort()
+
     driver.quit()
 
 

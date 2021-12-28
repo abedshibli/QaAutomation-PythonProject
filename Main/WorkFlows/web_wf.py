@@ -3,10 +3,10 @@ import time
 import allure
 
 from Main import Utilities
+from Main.Utilities.common_ops import Common_Ops, eyes
 from Main.Utilities.jdbc import JDBC
 from Main.Utilities.manage_pages import Manage_Pages
 from Main.Extensions.web_actions import Web_Actions
-from Test.conftest import eyes
 
 
 class Web_WF:
@@ -27,10 +27,12 @@ class Web_WF:
     @staticmethod
     @allure.step("login to the web")
     def login(username, password):
+        Common_Ops.attach_file()
         Web_Actions.insert_value(username, Utilities.manage_pages.login_page.get_username())
         Web_Actions.insert_value(password, Utilities.manage_pages.login_page.get_password())
         Web_Actions.click_action(Utilities.manage_pages.login_page.get_signin_btn())
-        time.sleep(3)
+        time.sleep(2)
+        Common_Ops.attach_file()
 
     @staticmethod
     @allure.step("create new bank account")
@@ -69,11 +71,13 @@ class Web_WF:
     @staticmethod
     @allure.step("dismiss any notification")
     def dismiss_notification():
+        Common_Ops.init_eyes()
         eyes.check_window("start")
         Web_Actions.click_action(Utilities.manage_pages.main_page.get_notifications())
         eyes.check_window("before dismiss notification")
         Web_Actions.click_action(Utilities.manage_pages.notification_page.get_dismiss_btn())
         eyes.check_window("after dismiss notification")
+        Common_Ops.close_eyes()
 
     @staticmethod
     @allure.step("check the name of the bank in the account")
