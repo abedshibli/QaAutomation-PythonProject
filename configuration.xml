@@ -3,6 +3,26 @@
     <!-- web-->
     <browserType>chrome</browserType>
     <url>http://localhost:3000/</url>
+    <!-- test1-->
+    <firstName1>Jondi</firstName1>
+    <lastName1>Tsveniashvili</lastName1>
+    <userName1>Abed122</userName1>
+    <password1>123456</password1>
+    <bankName1>leumi</bankName1>
+    <account1>123456789</account1>
+    <routing1>123123123</routing1>
+
+    <!-- test2-->
+    <existUser>Allie2</existUser>
+    <existPassword>s3cret</existPassword>
+    <expextedResult>$1,648.67</expextedResult>
+
+    <!-- test4 -->
+    <firstName4>Kuku212</firstName4>
+    <lastName4>kukushvili</lastName4>
+    <userName4>kuku1222</userName4>
+    <password4>12345678</password4>
+    <expectedBankName4>leumi</expectedBankName4>
 
     <!-- mobile-->
     <phoneName>RF8N21R48PA</phoneName>
@@ -11,18 +31,75 @@
     <mobileOs>android</mobileOs>
     <appiumServer>http://localhost:4723/wd/hub</appiumServer>
 
+    <!-- test1 -->
+    <searchApp>TVM Calculator</searchApp>
+    <xpathMobileText>'TVM Calculator'</xpathMobileText>
+    <expectedMobile1>TVM Calculator</expectedMobile1>
+
+    <!-- test2-->
+    <expectedMobile2>24</expectedMobile2>
+
 
     <!-- electron-->
     <electron_app>C:\\Automation\\Electrons\\Electron API Demos.exe</electron_app>
     <edriver>C:\Automation\electronDriver\electrondriver.exe</edriver>
     <binaryLocation>C:\Automation\Electron API Demos\Electron API Demos.exe</binaryLocation>
 
+    <!--test-->
+    <expectedSize>Your screen is: 1536px x 864px</expectedSize>
+
     <!-- api-->
     <apiUrl>http://localhost:3000</apiUrl>
+
+    <!-- test1-->
+    <userId1>5</userId1>
+    <id1>1</id1>
+    <title1>java hackathon</title1>
+    <body1>23</body1>
+    <status1>201</status1>
+
+        <!-- test2-->
+    <userId2>7</userId2>
+    <id2>12</id2>
+    <title2>java hackathon</title2>
+    <body2>3</body2>
+    <title3>python hackathon></title3>
+    <status2>200</status2>
+
+    <!--test3-->
+    <status3>200</status3>
+
 
     <!-- desktop-->
     <app>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</app>
     <platformName>Windows</platformName>
     <deviceName>WindowsPC</deviceName>
     <serverDesktop>http://127.0.0.1:4723</serverDesktop>
+
+    <!--test1-->
+    <num1>3</num1>
+    <num2>2</num2>
+    <op1>*</op1>
+    <calculteResult1>6</calculteResult1>
+
+    <!--test2-->
+    <num3>9</num3>
+    <num4>3</num4>
+    <op2>/</op2>
+    <calculteResult2>3</calculteResult2>
+
+    <!--test3-->
+    <num5>1</num5>
+    <num6>8</num6>
+    <op3>+</op3>
+    <calculteResult3>9</calculteResult3>
+
+    <!--test4-->
+    <num7>9</num7>
+    <num8>2</num8>
+    <op4>-</op4>
+    <calculteResult4>7</calculteResult4>
+
+
+    <eyesApiKey>wLCwiZvtsfJZ1l4C1w2xEVUaCQqR5ZB8hwW8YECm107fE110</eyesApiKey>
 </env>

@@ -18,25 +18,25 @@ class Desktop_WF:
     @staticmethod
     @allure.step("number to webElemnt")
     def number_to_webElement(number):
-        if number == 0:
+        if number == "0":
             Utilities.manage_pages.calc_page.get_zero().click()
-        elif number == 1:
+        elif number == "1":
             Utilities.manage_pages.calc_page.get_one().click()
-        elif number == 2:
+        elif number == "2":
             Utilities.manage_pages.calc_page.get_two().click()
-        elif number == 3:
+        elif number == "3":
             Utilities.manage_pages.calc_page.get_three().click()
-        elif number == 4:
+        elif number == "4":
             Utilities.manage_pages.calc_page.get_four().click()
-        elif number == 5:
+        elif number == "5":
             Utilities.manage_pages.calc_page.get_five().click()
-        elif number == 6:
+        elif number == "6":
             Utilities.manage_pages.calc_page.get_six().click()
-        elif number == 7:
+        elif number == "7":
             Utilities.manage_pages.calc_page.get_seven().click()
-        elif number == 8:
+        elif number == "8":
             Utilities.manage_pages.calc_page.get_eight().click()
-        elif number == 9:
+        elif number == "9":
             Utilities.manage_pages.calc_page.get_nine().click()
         else:
             raise ValueError('"Unexpected value')
@@ -59,5 +59,5 @@ class Desktop_WF:
     @allure.step("get result")
     def get_calc_result():
         Desktop_Actions.click_action(Utilities.manage_pages.calc_page.get_equal())
-        return int(Utilities.manage_pages.calc_page.get_result().text[10:])
+        return Utilities.manage_pages.calc_page.get_result().text[11:]
 

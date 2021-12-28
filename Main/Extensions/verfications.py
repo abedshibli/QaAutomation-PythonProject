@@ -6,3 +6,4 @@ class Verifications:
     @allure.step("verify actual and expected")
     def verify_equals(actual, expected):
         assert actual == expected
+

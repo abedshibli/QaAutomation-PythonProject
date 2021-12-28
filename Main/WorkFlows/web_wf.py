@@ -84,3 +84,37 @@ class Web_WF:
     def check_bank_name():
         Web_Actions.click_action(Utilities.manage_pages.main_page.get_bank_account())
         return Web_Actions.get_text(Utilities.manage_pages.bank_details_page.get_bank_name())
+
+    # test1
+    @staticmethod
+    @allure.step("checking user registering ")
+    def register_check():
+        Web_WF.register(Common_Ops.get_data("firstName1"), Common_Ops.get_data("lastName1"),
+                        Common_Ops.get_data("userName1"), Common_Ops.get_data("password1"))
+        Web_WF.login(Common_Ops.get_data("userName1"), Common_Ops.get_data("password1"))
+        Web_WF.new_bank_account(Common_Ops.get_data("bankName1"), Common_Ops.get_data("account1"),
+                                Common_Ops.get_data("routing1"))
+        connected_user = Web_WF.current_connected_user()
+        Web_WF.logout_user()
+        return connected_user
+
+    # test2
+    @staticmethod
+    @allure.step("checking bank balance of existing user")
+    def check_balance():
+        Web_WF.login(Common_Ops.get_data("existUser"), Common_Ops.get_data("existPassword"))
+        balance = Web_WF.get_balance_text()
+        Web_WF.logout_user()
+        return balance
+
+    # test4
+    @staticmethod
+    @allure.step("checking bank name")
+    def check_bank_name_flow():
+        Web_WF.register(Common_Ops.get_data("firstName4"), Common_Ops.get_data("lastName4"),
+                        Common_Ops.get_data("userName4"), Common_Ops.get_data("password4"))
+        Web_WF.login(Common_Ops.get_data("userName4"), Common_Ops.get_data("password4"))
+        Web_WF.fill_bank()
+        bank_name = Web_WF.check_bank_name()
+        Web_WF.logout_user()
+        return bank_name
