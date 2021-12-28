@@ -4,6 +4,7 @@ from Main.PageObject.mobile.calc_page import Calc_Page
 from Main.PageObject.mobile.financial_page import Financial_Page
 from Main.PageObject.mobile.search_results_po import Search_Page
 from Main.PageObject.mobile.tmv_page import TMV_Page
+from Main.PageObject.web.bank_details_page import Bank_Details_Page
 from Main.PageObject.web.login_page import LoginPage
 from Main.PageObject.web.main_page import MainPage
 from Main.PageObject.web.new_bank_account_page import Bank_Account_Page
@@ -19,6 +20,7 @@ class Manage_Pages:
         globals()['bank_account_page'] = Bank_Account_Page(driver)
         globals()['main_page'] = MainPage(driver)
         globals()['notification_page'] = Notification_Page(driver)
+        globals()['bank_details_page'] = Bank_Details_Page(driver)
 
     @staticmethod
     def init_desktop_page(driver):

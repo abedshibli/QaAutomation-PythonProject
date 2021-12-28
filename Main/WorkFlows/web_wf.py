@@ -32,7 +32,6 @@ class Web_WF:
 
     @staticmethod
     def new_bank_account(bank_name, routing_num, account_num):
-
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_next_btn())
         Web_Actions.insert_value(bank_name, Utilities.manage_pages.bank_account_page.get_bank_name())
         Web_Actions.insert_value(routing_num, Utilities.manage_pages.bank_account_page.get_routing_number())
@@ -68,3 +67,7 @@ class Web_WF:
         Web_Actions.click_action(Utilities.manage_pages.notification_page.get_dismiss_btn())
         eyes.check_window("after dismiss notification")
 
+    @staticmethod
+    def check_bank_name():
+        Web_Actions.click_action(Utilities.manage_pages.main_page.get_bank_account())
+        return Web_Actions.get_text(Utilities.manage_pages.bank_details_page.get_bank_name())

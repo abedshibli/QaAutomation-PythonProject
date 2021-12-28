@@ -18,3 +18,7 @@ class MainPage:
     def get_notifications(self):
         return self.driver.find_element(By.XPATH, "(//span[@class='MuiIconButton-label'])[2]")
 
+    def get_bank_account(self):
+        return self.driver.find_element(By.XPATH, "//span[contains(text(),'Bank Accounts')]")
+
+
