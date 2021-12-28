@@ -35,3 +35,5 @@ class Common_Ops:
         image = "C:/Automation/Hackaton python/Hackathon-Python/screen-shots/screen.png"  # need to create folder: screen-shot first
         conftest.driver.get_screenshot_as_file(image)
         allure.attach.file(image, attachment_type=allure.attachment_type.PNG)
+
+    print("Hello world")
