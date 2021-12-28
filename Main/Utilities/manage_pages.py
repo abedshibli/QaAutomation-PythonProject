@@ -7,6 +7,7 @@ from Main.PageObject.mobile.tmv_page import TMV_Page
 from Main.PageObject.web.login_page import LoginPage
 from Main.PageObject.web.main_page import MainPage
 from Main.PageObject.web.new_bank_account_page import Bank_Account_Page
+from Main.PageObject.web.notifications_page import Notification_Page
 from Main.PageObject.web.register_page import RegisterPage
 
 class Manage_Pages:
@@ -17,6 +18,7 @@ class Manage_Pages:
         globals()['register_page'] = RegisterPage(driver)
         globals()['bank_account_page'] = Bank_Account_Page(driver)
         globals()['main_page'] = MainPage(driver)
+        globals()['notification_page'] = Notification_Page(driver)
 
     @staticmethod
     def init_desktop_page(driver):

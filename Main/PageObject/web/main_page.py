@@ -15,3 +15,6 @@ class MainPage:
     def get_balance(self):
         return self.driver.find_element(By.XPATH, "//h6[@data-test='sidenav-user-balance']")
 
+    def get_notifications(self):
+        return self.driver.find_element(By.XPATH, "(//span[@class='MuiIconButton-label'])[2]")
+

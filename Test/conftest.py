@@ -1,25 +1,18 @@
-import mysql
 import pytest
-import requests
+from applitools.selenium import Eyes
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-
-from Main.Utilities.DDT.manage_ddt import DDT
 from Main.Utilities.common_ops import Common_Ops
 from Main.Utilities.manage_pages import Manage_Pages
 
 # web
 driver = None
-action = None
-
+eyes = Eyes()
 
 # MOBILE
-reportDirectory = None
-reportFormat = None
 dc = {}
-testName = None
 
 # API
 url_api = 'http://localhost:3000'
@@ -44,8 +37,12 @@ def init_web(request):
 
     request.cls.driver.get(Common_Ops.get_data("url"))
     Manage_Pages.init_web_pages(request.cls.driver)
+    eyes.api_key = '3fnq5ClnQO3SLJ5rWqb93GjNbn0Z5WyU2RjUaC8bMJ0110'
+    eyes.open(request.cls.driver, "Applitools", "Batch run 1")
 
     yield
+    eyes.close()
+    eyes.abort()
     request.cls.driver.quit()
 
 
@@ -60,7 +57,7 @@ def init_mobile(request):
     Manage_Pages.init_mobile_pages(request.cls.driver)
 
     yield
-    driver.quit()
+    request.cls.driver.quit()
 
 
 @pytest.fixture(scope='class')

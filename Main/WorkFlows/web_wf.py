@@ -6,6 +6,7 @@ from Main import Utilities
 from Main.Utilities.jdbc import JDBC
 from Main.Utilities.manage_pages import Manage_Pages
 from Main.Extensions.web_actions import Web_Actions
+from Test.conftest import eyes
 
 
 class Web_WF:
@@ -58,3 +59,12 @@ class Web_WF:
         Web_WF.new_bank_account(JDBC.get_bank_list_details()[0][0], JDBC.get_bank_list_details()[0][1],
                                 JDBC.get_bank_list_details()[0][2])
         JDBC.connect_db().close()
+
+    @staticmethod
+    def dismiss_notification():
+        eyes.check_window("start")
+        Web_Actions.click_action(Utilities.manage_pages.main_page.get_notifications())
+        eyes.check_window("before dismiss notification")
+        Web_Actions.click_action(Utilities.manage_pages.notification_page.get_dismiss_btn())
+        eyes.check_window("after dismiss notification")
+

@@ -10,12 +10,12 @@ from Test import conftest
 class Test_web():
 
     def test_01(self):
-        Web_WF.register("Yoni", "Choen", "yoooooo", "123456")
-        Web_WF.login("yoooooo", "123456")
+        Web_WF.register("Yoni", "Choen", "yoni", "123456")
+        Web_WF.login("yoni", "123456")
         Web_WF.new_bank_account("Leumi", "123456789", "123123123")
         connected_user = Web_WF.current_connected_user()
         Web_WF.logout_user()
-        assert connected_user == "@yoooooo"
+        assert connected_user == "@yoni"
 
     def test_02(self):
         time.sleep(3)
@@ -32,7 +32,12 @@ class Test_web():
         assert connected_user == '@' + username
 
     def test_04(self):
-
         Web_WF.register("Yoni1", "Choen1", "yooooooo", "1234567")
         Web_WF.login("yooooooo", "1234567")
         Web_WF.fill_bank()
+        Web_WF.logout_user()
+
+    def test_05(self):
+        Web_WF.login("Allie2", "s3cret")
+        Web_WF.dismiss_notification()
+        Web_WF.logout_user()
