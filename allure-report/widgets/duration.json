@@ -1,0 +1,151 @@
+[ {
+  "uid" : "ce9bb2fe4862e33a",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640698406217,
+    "stop" : 1640698409691,
+    "duration" : 3474
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0a77ff8d6076942",
+  "name" : "verify if the delete action success",
+  "time" : {
+    "start" : 1640699060580,
+    "stop" : 1640699062667,
+    "duration" : 2087
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c1050064e4763729",
+  "name" : "verify the title",
+  "time" : {
+    "start" : 1640699483255,
+    "stop" : 1640699489714,
+    "duration" : 6459
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9e4b00fd11495dee",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640698402662,
+    "stop" : 1640698406211,
+    "duration" : 3549
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9385fc77789bb193",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640697151588,
+    "stop" : 1640697155085,
+    "duration" : 3497
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "88f271fecf1747a4",
+  "name" : "verify if the post action success",
+  "time" : {
+    "start" : 1640699054351,
+    "stop" : 1640699056447,
+    "duration" : 2096
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8494ffc3d7d75ca5",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640697161937,
+    "stop" : 1640697165402,
+    "duration" : 3465
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b417ebe21df2fd49",
+  "name" : "verify the result of calculate",
+  "time" : {
+    "start" : 1640699489716,
+    "stop" : 1640699494158,
+    "duration" : 4442
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "44108aea398e7d12",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640698416451,
+    "stop" : 1640698419879,
+    "duration" : 3428
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76c7f9b3561deda1",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640697155091,
+    "stop" : 1640697158497,
+    "duration" : 3406
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ae8913119e35222",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640698409696,
+    "stop" : 1640698413071,
+    "duration" : 3375
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87cf0ebd5c103f5b",
+  "name" : "verify if the put action success",
+  "time" : {
+    "start" : 1640699056450,
+    "stop" : 1640699060577,
+    "duration" : 4127
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "edbc29bedcb621e0",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640697158501,
+    "stop" : 1640697161931,
+    "duration" : 3430
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "268c9cecb8c00af5",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640697148000,
+    "stop" : 1640697151575,
+    "duration" : 3575
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c3c6a647123d64a",
+  "name" : "verify login successfully",
+  "time" : {
+    "start" : 1640698413076,
+    "stop" : 1640698416447,
+    "duration" : 3371
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,181 @@
+{
+  "uid" : "87cf0ebd5c103f5b",
+  "name" : "verify if the put action success",
+  "fullName" : "Test.test_api.Test_API_Requests#test_02",
+  "historyId" : "3fa6a3576859bd8b3371f7fb5826890f",
+  "time" : {
+    "start" : 1640699056450,
+    "stop" : 1640699060577,
+    "duration" : 4127
+  },
+  "description" : "This test verify if the put action success",
+  "descriptionHtml" : "<p>This test verify if the put action success</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "init_api",
+    "time" : {
+      "start" : 1640699050734,
+      "stop" : 1640699054350,
+      "duration" : 3616
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "This test verify if the put action success",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post action",
+      "time" : {
+        "start" : 1640699056450,
+        "stop" : 1640699058516,
+        "duration" : 2066
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userid",
+        "value" : "7"
+      }, {
+        "name" : "id",
+        "value" : "12"
+      }, {
+        "name" : "title",
+        "value" : "'java hackathon'"
+      }, {
+        "name" : "body",
+        "value" : "3"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "put action",
+      "time" : {
+        "start" : 1640699058517,
+        "stop" : 1640699060577,
+        "duration" : 2060
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userid",
+        "value" : "7"
+      }, {
+        "name" : "id",
+        "value" : "12"
+      }, {
+        "name" : "title",
+        "value" : "'python hackathon'"
+      }, {
+        "name" : "body",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "verify actual and expected",
+      "time" : {
+        "start" : 1640699060577,
+        "stop" : 1640699060577,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "200"
+      }, {
+        "name" : "expected",
+        "value" : "200"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "init_api::0",
+    "time" : {
+      "start" : 1640699062667,
+      "stop" : 1640699064772,
+      "duration" : 2105
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_api')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_API_Requests"
+  }, {
+    "name" : "host",
+    "value" : "Jondi"
+  }, {
+    "name" : "thread",
+    "value" : "21248-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_api')" ]
+  },
+  "source" : "87cf0ebd5c103f5b.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,209 @@
+{
+  "uid" : "44108aea398e7d12",
+  "name" : "verify login successfully",
+  "fullName" : "Test.test_web.Test_web#test_03",
+  "historyId" : "8205811e96103e22ce773b1b447422c2",
+  "time" : {
+    "start" : 1640698416451,
+    "stop" : 1640698419879,
+    "duration" : 3428
+  },
+  "description" : "This test verify that multiple users have successfully logged on to the site",
+  "descriptionHtml" : "<p>This test verify that multiple users have successfully logged on to the site</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "init_web",
+    "time" : {
+      "start" : 1640698398487,
+      "stop" : 1640698402661,
+      "duration" : 4174
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "This test verify that multiple users have successfully logged on to the site",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "login to the web",
+      "time" : {
+        "start" : 1640698416451,
+        "stop" : 1640698419789,
+        "duration" : 3338
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "username",
+        "value" : "'Jessyca.Kuhic'"
+      }, {
+        "name" : "password",
+        "value" : "'s3cret'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "check the username of current connected user",
+      "time" : {
+        "start" : 1640698419789,
+        "stop" : 1640698419807,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "logout from the web",
+      "time" : {
+        "start" : 1640698419807,
+        "stop" : 1640698419879,
+        "duration" : 72
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "verify actual and expected",
+      "time" : {
+        "start" : 1640698419879,
+        "stop" : 1640698419879,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "'@Jessyca.Kuhic'"
+      }, {
+        "name" : "expected",
+        "value" : "'@Jessyca.Kuhic'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "init_web::0",
+    "time" : {
+      "start" : 1640698419881,
+      "stop" : 1640698422016,
+      "duration" : 2135
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_web')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Test"
+  }, {
+    "name" : "suite",
+    "value" : "test_web"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_web"
+  }, {
+    "name" : "host",
+    "value" : "Jondi"
+  }, {
+    "name" : "thread",
+    "value" : "336-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test.test_web"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "password",
+    "value" : "'s3cret'"
+  }, {
+    "name" : "username",
+    "value" : "'Jessyca.Kuhic'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d914513048833b46",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640698243820,
+        "stop" : 1640698247228,
+        "duration" : 3408
+      }
+    }, {
+      "uid" : "34b666ea8eb73af4",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '..\\\\configuration.xml'",
+      "time" : {
+        "start" : 1640698160963,
+        "stop" : 1640698160963,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "53dc3ae813faa4a9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640697481669,
+        "stop" : 1640697485012,
+        "duration" : 3343
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_web')" ]
+  },
+  "source" : "44108aea398e7d12.json",
+  "parameterValues" : [ "'s3cret'", "'Jessyca.Kuhic'" ]
+}

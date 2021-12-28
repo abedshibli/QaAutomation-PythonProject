@@ -1,0 +1,187 @@
+{
+  "uid" : "268c9cecb8c00af5",
+  "name" : "verify login successfully",
+  "fullName" : "test_web.Test_web#test_03",
+  "historyId" : "76a69f2fd8f56ce8bb34e898c0bdc80f",
+  "time" : {
+    "start" : 1640697148000,
+    "stop" : 1640697151575,
+    "duration" : 3575
+  },
+  "description" : "This test verify that multiple users have successfully logged on to the site",
+  "descriptionHtml" : "<p>This test verify that multiple users have successfully logged on to the site</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "init_web",
+    "time" : {
+      "start" : 1640697143636,
+      "stop" : 1640697147998,
+      "duration" : 4362
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "This test verify that multiple users have successfully logged on to the site",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "login to the web",
+      "time" : {
+        "start" : 1640697148000,
+        "stop" : 1640697151490,
+        "duration" : 3490
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "username",
+        "value" : "'Katharina_Bernier'"
+      }, {
+        "name" : "password",
+        "value" : "'s3cret'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "check the username of current connected user",
+      "time" : {
+        "start" : 1640697151490,
+        "stop" : 1640697151517,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "logout from the web",
+      "time" : {
+        "start" : 1640697151517,
+        "stop" : 1640697151575,
+        "duration" : 58
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "verify actual and expected",
+      "time" : {
+        "start" : 1640697151575,
+        "stop" : 1640697151575,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "'@Katharina_Bernier'"
+      }, {
+        "name" : "expected",
+        "value" : "'@Katharina_Bernier'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "986ee31e30473e56",
+      "name" : "log",
+      "source" : "986ee31e30473e56.txt",
+      "type" : "text/plain",
+      "size" : 412
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "init_web::0",
+    "time" : {
+      "start" : 1640697165408,
+      "stop" : 1640697167536,
+      "duration" : 2128
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_web')"
+  }, {
+    "name" : "suite",
+    "value" : "test_web"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_web"
+  }, {
+    "name" : "host",
+    "value" : "Jondi"
+  }, {
+    "name" : "thread",
+    "value" : "17660-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_web"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "password",
+    "value" : "'s3cret'"
+  }, {
+    "name" : "username",
+    "value" : "'Katharina_Bernier'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_web')" ]
+  },
+  "source" : "268c9cecb8c00af5.json",
+  "parameterValues" : [ "'s3cret'", "'Katharina_Bernier'" ]
+}

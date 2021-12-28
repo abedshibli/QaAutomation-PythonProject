@@ -1,0 +1,31 @@
+1640680564078	geckodriver	INFO	Listening on 127.0.0.1:53268
+1640680567097	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\jondi\\AppData\\Local\\Temp\\rust_mozprofilejZnUPZ"
+1640680568219	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jondi\\AppData\\Local\\Temp\\rust_mozprofilejZnUPZ\\search.json.mozlz4", (void 0)))
+1640680571980	Marionette	INFO	Listening on port 53277
+1640680572229	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640680585963	Marionette	INFO	Stopped listening on port 53277
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\jondi\AppData\Local\Temp\rust_mozprofilejZnUPZ\protections.sqlite
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640680598166	geckodriver	INFO	Listening on 127.0.0.1:53334
+1640680601220	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\jondi\\AppData\\Local\\Temp\\rust_mozprofileOIzrvX"
+1640680601731	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jondi\\AppData\\Local\\Temp\\rust_mozprofileOIzrvX\\search.json.mozlz4", (void 0)))
+1640680604401	Marionette	INFO	Listening on port 53342
+1640680604435	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640680630467	Marionette	INFO	Stopped listening on port 53342
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

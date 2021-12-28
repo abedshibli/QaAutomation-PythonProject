@@ -1,0 +1,209 @@
+{
+  "uid" : "ce9bb2fe4862e33a",
+  "name" : "verify login successfully",
+  "fullName" : "Test.test_web.Test_web#test_03",
+  "historyId" : "012513f6bc8be4bfba9491160487d530",
+  "time" : {
+    "start" : 1640698406217,
+    "stop" : 1640698409691,
+    "duration" : 3474
+  },
+  "description" : "This test verify that multiple users have successfully logged on to the site",
+  "descriptionHtml" : "<p>This test verify that multiple users have successfully logged on to the site</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "init_web",
+    "time" : {
+      "start" : 1640698398487,
+      "stop" : 1640698402661,
+      "duration" : 4174
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "This test verify that multiple users have successfully logged on to the site",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "login to the web",
+      "time" : {
+        "start" : 1640698406217,
+        "stop" : 1640698409624,
+        "duration" : 3407
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "username",
+        "value" : "'Tavares_Barrows'"
+      }, {
+        "name" : "password",
+        "value" : "'s3cret'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "check the username of current connected user",
+      "time" : {
+        "start" : 1640698409624,
+        "stop" : 1640698409645,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "logout from the web",
+      "time" : {
+        "start" : 1640698409645,
+        "stop" : 1640698409690,
+        "duration" : 45
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "verify actual and expected",
+      "time" : {
+        "start" : 1640698409690,
+        "stop" : 1640698409691,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "'@Tavares_Barrows'"
+      }, {
+        "name" : "expected",
+        "value" : "'@Tavares_Barrows'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "init_web::0",
+    "time" : {
+      "start" : 1640698419881,
+      "stop" : 1640698422016,
+      "duration" : 2135
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_web')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Test"
+  }, {
+    "name" : "suite",
+    "value" : "test_web"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_web"
+  }, {
+    "name" : "host",
+    "value" : "Jondi"
+  }, {
+    "name" : "thread",
+    "value" : "336-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test.test_web"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "password",
+    "value" : "'s3cret'"
+  }, {
+    "name" : "username",
+    "value" : "'Tavares_Barrows'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2314260bc4a032cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640698233610,
+        "stop" : 1640698237078,
+        "duration" : 3468
+      }
+    }, {
+      "uid" : "1fa54db9f9b80c59",
+      "status" : "broken",
+      "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '..\\\\configuration.xml'",
+      "time" : {
+        "start" : 1640698160833,
+        "stop" : 1640698160833,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "67ae9657290ad82f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640697471400,
+        "stop" : 1640697474876,
+        "duration" : 3476
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_web')" ]
+  },
+  "source" : "ce9bb2fe4862e33a.json",
+  "parameterValues" : [ "'s3cret'", "'Tavares_Barrows'" ]
+}

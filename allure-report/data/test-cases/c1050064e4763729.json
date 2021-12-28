@@ -1,0 +1,196 @@
+{
+  "uid" : "c1050064e4763729",
+  "name" : "verify the title",
+  "fullName" : "Test.test_mobile.Test_Mobile#test_1",
+  "historyId" : "baa3541326f12e1b04b9e0a3c254dd4f",
+  "time" : {
+    "start" : 1640699483255,
+    "stop" : 1640699489714,
+    "duration" : 6459
+  },
+  "description" : "This test verify the title of an app",
+  "descriptionHtml" : "<p>This test verify the title of an app</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "init_mobile",
+    "time" : {
+      "start" : 1640699469225,
+      "stop" : 1640699483254,
+      "duration" : 14029
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "This test verify the title of an app",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "search functionality",
+      "time" : {
+        "start" : 1640699483256,
+        "stop" : 1640699486944,
+        "duration" : 3688
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "search",
+        "value" : "'TVM Calculator'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "get result",
+      "time" : {
+        "start" : 1640699486944,
+        "stop" : 1640699487217,
+        "duration" : 273
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "reslut_text",
+        "value" : "''TVM Calculator''"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "get application's title",
+      "time" : {
+        "start" : 1640699487217,
+        "stop" : 1640699488121,
+        "duration" : 904
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "app_title",
+        "value" : "''TVM Calculator''"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "navigate to home page",
+      "time" : {
+        "start" : 1640699488122,
+        "stop" : 1640699489714,
+        "duration" : 1592
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "verify actual and expected",
+      "time" : {
+        "start" : 1640699489714,
+        "stop" : 1640699489714,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "'TVM Calculator'"
+      }, {
+        "name" : "expected",
+        "value" : "'TVM Calculator'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "init_mobile::0",
+    "time" : {
+      "start" : 1640699494159,
+      "stop" : 1640699497685,
+      "duration" : 3526
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_mobile')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Test"
+  }, {
+    "name" : "suite",
+    "value" : "test_mobile"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_Mobile"
+  }, {
+    "name" : "host",
+    "value" : "Jondi"
+  }, {
+    "name" : "thread",
+    "value" : "22364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test.test_mobile"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_mobile')" ]
+  },
+  "source" : "c1050064e4763729.json",
+  "parameterValues" : [ ]
+}
