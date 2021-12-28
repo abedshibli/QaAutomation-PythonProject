@@ -38,25 +38,24 @@ def init_web():
     driver.get(Common_Ops.get_data("url"))
     Manage_Pages.init_web_pages(driver)
 
-    # eyes.api_key = 'wLCwiZvtsfJZ1l4C1w2xEVUaCQqR5ZB8hwW8YECm107fE110'
-    # eyes.open(driver, "Applitools", "Batch run 1")
+    eyes.api_key = 'wLCwiZvtsfJZ1l4C1w2xEVUaCQqR5ZB8hwW8YECm107fE110'
+    eyes.open(driver, "Applitools", "Batch run 1")
 
     yield
-    # eyes.close()
-    # eyes.abort()
+    eyes.close()
+    eyes.abort()
     driver.quit()
 
 
 @pytest.fixture(scope='class')
 def init_mobile():
-    dc['udid'] = 'RF8N21R48PA'
-    dc['appPackage'] = 'com.financial.calculator'
-    dc['appActivity'] = '.FinancialCalculators'
-    dc['platformName'] = 'android'
-    driver = webdriver.Remote('http://localhost:4723/wd/hub', dc)
+    dc['udid'] = Common_Ops.get_data("phoneName")
+    dc['appPackage'] = Common_Ops.get_data("packageName")
+    dc['appActivity'] = Common_Ops.get_data("activityName")
+    dc['platformName'] = Common_Ops.get_data("mobileOs")
+    driver = webdriver.Remote(Common_Ops.get_data("appiumServer"), dc)
 
     Manage_Pages.init_mobile_pages(driver)
-    # globals()["driver"] = driver
 
     yield
     driver.quit()

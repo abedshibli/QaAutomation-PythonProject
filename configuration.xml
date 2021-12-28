@@ -5,9 +5,11 @@
     <url>http://localhost:3000/</url>
 
     <!-- mobile-->
-    <reportDirectory>reports</reportDirectory>
-    <reportFormat>xml</reportFormat>
-    <testName>Untitled</testName>
+    <phoneName>RF8N21R48PA</phoneName>
+    <packageName>com.financial.calculator</packageName>
+    <activityName>.FinancialCalculators</activityName>
+    <mobileOs>android</mobileOs>
+    <appiumServer>http://localhost:4723/wd/hub</appiumServer>
 
     <!-- electron-->
     <electron_app>C:\\Automation\\Electrons\\Electron API Demos.exe</electron_app>

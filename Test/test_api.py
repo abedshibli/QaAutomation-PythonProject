@@ -7,7 +7,6 @@ from Main.Extensions.verfications import Verifications
 
 @pytest.mark.usefixtures('init_api')
 class Test_API_Requests:
-
     def test_01(self):
         Verifications.verify_equals(API_ACTIONS.post(5, 1, "java hackathon", 23), 201)
 
