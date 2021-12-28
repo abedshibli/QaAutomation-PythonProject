@@ -1,5 +1,3 @@
-import time
-
 import allure
 from Main import Utilities
 from Main.Utilities.manage_pages import Manage_Pages
@@ -29,12 +27,12 @@ class Mobile_WF:
         Mobile_Actions.click_action(Utilities.manage_pages.search_results_po.search_result(reslut_text))
 
     @staticmethod
-    @allure.step("get title")
+    @allure.step("get application's title")
     def get_app_title(app_title):
         return Mobile_Actions.get_text(Utilities.manage_pages.search_results_po.search_result(app_title))
 
     @staticmethod
-    @allure.step("get reslut_text")
+    @allure.step("get calculate result")
     def get_result_text():
         return Mobile_Actions.get_text(Utilities.manage_pages.calc_page.get_result())
 

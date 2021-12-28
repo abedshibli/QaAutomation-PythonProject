@@ -1,7 +1,5 @@
 import csv
 
-from Test import conftest
-
 
 class DDT:
     my_list = []

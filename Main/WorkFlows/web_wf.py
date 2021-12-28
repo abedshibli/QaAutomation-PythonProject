@@ -1,6 +1,6 @@
 import time
 
-import pytest
+import allure
 
 from Main import Utilities
 from Main.Utilities.jdbc import JDBC
@@ -12,6 +12,7 @@ from Test.conftest import eyes
 class Web_WF:
 
     @staticmethod
+    @allure.step("register to the web")
     def register(first_name, last_name, username, password):
         Web_Actions.click_action(Utilities.manage_pages.login_page.get_signup_page())
         Web_Actions.click_action(Utilities.manage_pages.login_page.get_signup_page())
@@ -24,6 +25,7 @@ class Web_WF:
         time.sleep(3)
 
     @staticmethod
+    @allure.step("login to the web")
     def login(username, password):
         Web_Actions.insert_value(username, Utilities.manage_pages.login_page.get_username())
         Web_Actions.insert_value(password, Utilities.manage_pages.login_page.get_password())
@@ -31,6 +33,7 @@ class Web_WF:
         time.sleep(3)
 
     @staticmethod
+    @allure.step("create new bank account")
     def new_bank_account(bank_name, routing_num, account_num):
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_next_btn())
         Web_Actions.insert_value(bank_name, Utilities.manage_pages.bank_account_page.get_bank_name())
@@ -41,18 +44,22 @@ class Web_WF:
         Web_Actions.click_action(Utilities.manage_pages.bank_account_page.get_done_btn())
 
     @staticmethod
+    @allure.step("check the username of current connected user")
     def current_connected_user():
         return Web_Actions.get_text(Utilities.manage_pages.main_page.get_current_connected_user())
 
     @staticmethod
+    @allure.step("logout from the web")
     def logout_user():
         return Web_Actions.click_action(Utilities.manage_pages.main_page.get_logout_btn())
 
     @staticmethod
+    @allure.step("get the balance")
     def get_balance_text():
         return Web_Actions.get_text(Utilities.manage_pages.main_page.get_balance())
 
     @staticmethod
+    @allure.step("insert details of new bank account from DB")
     def fill_bank():
         JDBC.connect_db()
         Web_WF.new_bank_account(JDBC.get_bank_list_details()[0][0], JDBC.get_bank_list_details()[0][1],
@@ -60,6 +67,7 @@ class Web_WF:
         JDBC.connect_db().close()
 
     @staticmethod
+    @allure.step("dismiss any notification")
     def dismiss_notification():
         eyes.check_window("start")
         Web_Actions.click_action(Utilities.manage_pages.main_page.get_notifications())
@@ -68,6 +76,7 @@ class Web_WF:
         eyes.check_window("after dismiss notification")
 
     @staticmethod
+    @allure.step("check the name of the bank in the account")
     def check_bank_name():
         Web_Actions.click_action(Utilities.manage_pages.main_page.get_bank_account())
         return Web_Actions.get_text(Utilities.manage_pages.bank_details_page.get_bank_name())

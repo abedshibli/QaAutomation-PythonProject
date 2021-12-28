@@ -23,7 +23,7 @@ class Test_desktop:
     def test_03(self):
         Verifications.verify_equals(Desktop_WF.two_numbers_to_calculate(1, "+", 8), 9)
 
-    @allure.title("verify add numbers")
+    @allure.title("verify subtraction numbers")
     @allure.description("This test verify the result of subtraction 2 numbers")
     def test_04(self):
         Verifications.verify_equals(Desktop_WF.two_numbers_to_calculate(9, "-", 2), 7)
