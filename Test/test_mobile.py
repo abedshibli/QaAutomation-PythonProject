@@ -20,5 +20,5 @@ class Test_Mobile:
     @allure.title("verify the result of calculate")
     @allure.description("This test verify the result of multiply 2 numbers")
     def test_2(self):
-        Mobile_WF.calculate("'6'", "'×'", "'5'")
-        Verifications.verify_equals(Mobile_WF.get_result_text(), "30")
+        Mobile_WF.calculate("'4'", "'×'", "'6'")
+        Verifications.verify_equals(Mobile_WF.get_result_text(), "24")

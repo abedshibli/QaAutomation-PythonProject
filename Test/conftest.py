@@ -38,12 +38,12 @@ def init_web():
     driver.get(Common_Ops.get_data("url"))
     Manage_Pages.init_web_pages(driver)
 
-    eyes.api_key = 'wLCwiZvtsfJZ1l4C1w2xEVUaCQqR5ZB8hwW8YECm107fE110'
-    eyes.open(driver, "Applitools", "Batch run 1")
+    # eyes.api_key = 'wLCwiZvtsfJZ1l4C1w2xEVUaCQqR5ZB8hwW8YECm107fE110'
+    # eyes.open(driver, "Applitools", "Batch run 1")
 
     yield
-    eyes.close()
-    eyes.abort()
+    # eyes.close()
+    # eyes.abort()
     driver.quit()
 
 

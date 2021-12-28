@@ -11,6 +11,7 @@
     <mobileOs>android</mobileOs>
     <appiumServer>http://localhost:4723/wd/hub</appiumServer>
 
+
     <!-- electron-->
     <electron_app>C:\\Automation\\Electrons\\Electron API Demos.exe</electron_app>
     <edriver>C:/Automation/Electron/electrondriver.exe</edriver>
