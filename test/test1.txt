@@ -1,3 +1,4 @@
 this is a test text file
 this is a new line 
 this is also a new line
+added from terminal
